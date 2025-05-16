@@ -1,0 +1,451 @@
+/* ========== Custom Stylesheet for Tradella International ========== */
+
+/* Google Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ========== Global Settings ========== */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #101010;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Top Bar Background */
+#top-bar {
+    background-color: #020e28;
+}
+
+#top-bar .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+#top-bar .contact-info:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+#top-bar .contact-info:not(:last-child)::after {
+    content: "";
+    height: 15px;
+    position: absolute;
+    width: 1px;
+    margin-right: 20px;
+    top: 50%;
+    left: 100%;
+    background: #fff;
+    transform: translateY(-50%);
+}
+
+#top-bar .contact-info a {
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+#top-bar .contact-info a:hover {
+    color: #ffc107;
+}
+
+#top-bar .contact-info img {
+    height: 15px;
+}
+
+/* Top Bar Icons */
+.bi {
+    font-size: 0.9rem;
+}
+
+/* Navbar */
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.navbar-light .navbar-nav {
+    gap: 36px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 600;
+    color: #020e28;
+    padding: 52px 0;
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fdbe00;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fdbe00;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover::after,
+.navbar-light .navbar-nav .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.btn-primary {
+    background: #007BFF;
+    background: -webkit-linear-gradient(-17deg, rgba(0, 123, 255, 1) 0%, rgba(253, 190, 0, 1) 100%);
+    background: -moz-linear-gradient(-17deg, rgba(0, 123, 255, 1) 0%, rgba(253, 190, 0, 1) 100%);
+    background: linear-gradient(-17deg, rgba(0, 123, 255, 1) 0%, rgba(253, 190, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#007BFF", endColorstr="#FDBE00", GradientType=0);
+    border-radius: 100px;
+    border: none;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
+
+/* Hero Slider */
+#hero {
+    background: #020e28;
+}
+
+#hero .hero-slider .item {
+    position: relative;
+}
+
+#hero .hero-slider .item .container {
+    z-index: 2;
+}
+
+.hero-image-wrapper {
+    width: 80%;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-image-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+/* Hero Slider Text */
+#hero .hero-slider .item h1 {
+    font-size: 64px;
+    color: #fff;
+    line-height: 1;
+}
+
+#hero .hero-slider .item .lead {
+    font-size: 29px;
+    line-height: 1.5;
+}
+
+/* Hero Slider Button */
+.slick-dots {
+    position: absolute;
+    bottom: 5px;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    border: 0;
+    background: transparent;
+    display: block;
+    width: 8px;
+    height: 8px;
+    outline: none;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    background-color: #fff;
+}
+
+.slick-dots li button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    -webkit-font-smoothing: antialiased;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    width: 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+}
+
+.slick-dots li button::before {
+    content: "";
+}
+
+
+/* Features Section */
+#features .container{
+    box-shadow: 0 0 16px rgba(139, 139, 139, 0.2);
+}
+#features h5 {
+    color: #101010;
+    font-size: 30px;
+    text-align: left;
+}
+
+.feature-item{
+    padding: 30px 20px;
+}
+.feature-item .icon-box{
+    gap:30px;
+}
+
+#features p {
+    margin-bottom: 0;
+}
+
+/* About Section */
+#about h2 {
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+}
+
+#about h2::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background-color: #007dff;
+    margin-top: 10px;
+    position: absolute;
+}
+
+/* Parts Categories Overlay */
+#parts .overlay {
+    z-index: 0;
+}
+
+#parts .container > .row > .col-md-6 {
+    z-index: 1;
+}
+
+#parts h5 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 30px;
+}
+
+#parts h5::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background-color: #007dff;
+    margin-top: 10px;
+}
+
+#parts img {
+    margin-bottom: 18px;
+}
+
+#parts .parts-items{
+    padding: 30px;
+}
+
+#parts p {
+    margin-bottom: 0.5rem;
+}
+
+#parts a {
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Brands Section */
+#brands h2 {
+    color: #004377;
+    margin-bottom: 0.5rem;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#brands h2::after {
+    content: "";
+    display: block;
+    width: 172px;
+    height: 2px;
+    background-color: #007dff;
+    margin-top: 10px;
+}
+
+#brands ul{
+    grid-template-columns: repeat(2, 1fr);
+    gap:50px;
+}
+
+#brands ul li {
+    margin-bottom: 1rem;
+}
+
+/* CTA Section */
+#cta .overlay {
+    z-index: 0;
+}
+
+#cta .container {
+    z-index: 1;
+}
+
+#cta h2 {
+    font-size: 2.25rem;
+}
+
+#cta .cta-content{
+    background: #141d32;
+    padding: 30px;
+    max-width: 760px;
+    right: -72px;
+}
+#cta .cta-content h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#cta .cta-content a {
+    background: #007dff;
+    margin-bottom: 0;
+    color: #fff;
+    border-radius: 100px;
+    font-weight: 700;
+}
+/* Footer base */
+.footer {
+    background-color: #020e28;
+}
+
+.footer h5{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Bottom copyright bar */
+.footer-bottom {
+    background-color: #000818;
+    color: #fff;
+}
+
+/* Gradient button for “Request A Quote” */
+.btn-gradient {
+    background: linear-gradient(90deg, #ffc107 0%, #007bff 100%);
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    border-radius: 100px;
+    padding: 10px 25px;
+}
+.btn-gradient:hover {
+    opacity: 0.9;
+}
+
+/* Make sure your images span full width/height */
+.footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer .contact-info li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 767px) {
+    #hero .hero-slider .item {
+        height: 400px !important;
+    }
+
+    .hero-image-wrapper {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    #features .col-md-4 {
+        text-align: left !important;
+    }
+}
